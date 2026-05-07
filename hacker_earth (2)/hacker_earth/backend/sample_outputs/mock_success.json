@@ -1,0 +1,97 @@
+{
+  "status": "success",
+  "request_id": "b18b488a-9f5a-4b95-a7b3-c1c5a92a2a09",
+  "processing_mode": "mock_demo",
+  "analytics": {
+    "pages_processed": 1,
+    "extraction_time": "0.01s",
+    "ocr_time": "0.00s",
+    "nlp_time": "0.05s",
+    "total_time": "0.06s",
+    "memory_est_mb": 150.5
+  },
+  "dashboard": {
+    "risk_meter": 82,
+    "heat_score": 91,
+    "priority_color": "red",
+    "urgency_badge": "HIGH",
+    "tags": [
+      "Land Dispute",
+      "Compensation"
+    ],
+    "deadline_alerts": [
+      {
+        "raw": "within 2 weeks",
+        "normalized_days": 14
+      }
+    ],
+    "summary_cards": [
+      "ORDER: The respondent is directed to vacate the premises."
+    ],
+    "timeline": [
+      {
+        "date": "15th June 2023",
+        "event": "Order/Direction issued"
+      }
+    ],
+    "voice_narration": "This case involves a Land Dispute where the court has issued an order requiring compliance within 2 weeks.",
+    "ai_reasoning": "Urgency marked HIGH due to mandatory compliance language and short deadline.",
+    "appeal_recommended": true
+  },
+  "data": {
+    "case_number": {
+      "value": "W.P.(C) 1234/2023",
+      "confidence": 0.99
+    }
+  },
+  "errors": [],
+  "frontend_adapted": {
+    "ui_risk_meter": {
+      "value": 82,
+      "label": "Legal Risk",
+      "color": "danger"
+    },
+    "ui_heat_score": {
+      "value": 91,
+      "label": "Action Heat",
+      "color": "danger"
+    },
+    "ui_urgency": {
+      "badge_text": "HIGH",
+      "badge_color": "danger"
+    },
+    "ui_tags": [
+      {
+        "label": "Land Dispute",
+        "key": "land_dispute"
+      },
+      {
+        "label": "Compensation",
+        "key": "compensation"
+      }
+    ],
+    "ui_deadlines": [
+      {
+        "days": 14,
+        "raw_text": "within 2 weeks",
+        "is_critical": false
+      }
+    ],
+    "ui_cards": [
+      {
+        "id": 0,
+        "content": "ORDER: The respondent is directed to vacate the premises."
+      }
+    ],
+    "ui_timeline_events": [
+      {
+        "id": 0,
+        "date": "15th June 2023",
+        "event": "Order/Direction issued"
+      }
+    ],
+    "ui_voice": "This case involves a Land Dispute where the court has issued an order requiring compliance within 2 weeks.",
+    "ui_ai_reasoning": "Urgency marked HIGH due to mandatory compliance language and short deadline.",
+    "ui_appeal_recommended": true
+  }
+}

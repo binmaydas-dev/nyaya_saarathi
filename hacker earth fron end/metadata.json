@@ -1,0 +1,8 @@
+{
+  "name": "Nyaya Saarathi",
+  "description": "Futuristic legal intelligence platform and explainable AI decision intelligence system.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}

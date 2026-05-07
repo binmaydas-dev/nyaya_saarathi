@@ -1,0 +1,118 @@
+{
+  "status": "success",
+  "request_id": "8e3c1b6d-4a11-4b11-9a7c-c1a6b7e8d3f1",
+  "processing_mode": "text_extraction",
+  "analytics": {
+    "pages_processed": 1,
+    "extraction_time": "0.12s",
+    "ocr_time": "0.00s",
+    "nlp_time": "0.45s",
+    "total_time": "0.57s",
+    "memory_est_mb": 145.2
+  },
+  "dashboard": {
+    "risk_meter": 60,
+    "heat_score": 75,
+    "priority_color": "orange",
+    "urgency_badge": "High",
+    "tags": [
+      "Property",
+      "Land Dispute"
+    ],
+    "deadline_alerts": [
+      {
+        "raw": "forthwith",
+        "normalized_days": 0
+      }
+    ],
+    "summary_cards": [
+      "ORDER: The property must be divided equally.",
+      "ORDER: Parties must vacate the disputed premises forthwith."
+    ],
+    "timeline": [
+      {
+        "date": "02/03/2023",
+        "event": "Document dated"
+      }
+    ],
+    "voice_narration": "This case involves a Property dispute between ANITA SHARMA and SURESH SHARMA. The court has issued an order requiring compliance forthwith.",
+    "ai_reasoning": "Urgency marked HIGH due to mandatory compliance language and an immediate deadline.",
+    "appeal_recommended": false
+  },
+  "data": {
+    "case_number": {
+      "value": "Civil Appeal No. 112/2022",
+      "confidence": 0.85
+    },
+    "court_name": {
+      "value": "SUPREME COURT OF INDIA",
+      "confidence": 0.9
+    },
+    "date": {
+      "value": "02/03/2023",
+      "confidence": 0.88
+    },
+    "petitioner": {
+      "value": "ANITA SHARMA ... Appellant",
+      "confidence": 0.75
+    },
+    "respondent": {
+      "value": "SURESH SHARMA ... Respondent",
+      "confidence": 0.75
+    }
+  },
+  "errors": [],
+  "frontend_adapted": {
+    "ui_risk_meter": {
+      "value": 60,
+      "label": "Legal Risk",
+      "color": "warning"
+    },
+    "ui_heat_score": {
+      "value": 75,
+      "label": "Action Heat",
+      "color": "warning"
+    },
+    "ui_urgency": {
+      "badge_text": "High",
+      "badge_color": "warning"
+    },
+    "ui_tags": [
+      {
+        "label": "Property",
+        "key": "property"
+      },
+      {
+        "label": "Land Dispute",
+        "key": "land_dispute"
+      }
+    ],
+    "ui_deadlines": [
+      {
+        "days": 0,
+        "raw_text": "forthwith",
+        "is_critical": true
+      }
+    ],
+    "ui_cards": [
+      {
+        "id": 0,
+        "content": "ORDER: The property must be divided equally."
+      },
+      {
+        "id": 1,
+        "content": "ORDER: Parties must vacate the disputed premises forthwith."
+      }
+    ],
+    "ui_timeline_events": [
+      {
+        "id": 0,
+        "date": "02/03/2023",
+        "event": "Document dated"
+      }
+    ],
+    "ui_voice": "This case involves a Property dispute between ANITA SHARMA and SURESH SHARMA. The court has issued an order requiring compliance forthwith.",
+    "ui_ai_reasoning": "Urgency marked HIGH due to mandatory compliance language and an immediate deadline.",
+    "ui_appeal_recommended": false
+  }
+}

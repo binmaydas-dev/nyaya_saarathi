@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-matte: #0F1115;
+  --color-cream: #F5F2EA;
+  --color-navy: #0B1F3A;
+  --color-gold: #C8A96B;
+  --color-soft: #A1A1AA;
+}
+
+@layer base {
+  body {
+    @apply bg-matte text-cream font-inter antialiased selection:bg-gold/30 selection:text-cream;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md;
+}
+
+.gold-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-yellow-200;
+}
+

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NyayaMitra Decision Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">NyayaMitra</p>
+        <h1>Legal Decision Intelligence</h1>
+      </div>
+      <div class="system-status">
+        <span id="apiStatus" class="status-dot"></span>
+        <span id="statusText">Checking API</span>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="upload-panel">
+        <div class="panel-heading">
+          <h2>Upload PDF</h2>
+          <p>Use mock mode for the safest hackathon flow.</p>
+        </div>
+
+        <form id="uploadForm" class="upload-form">
+          <label class="file-picker" for="pdfInput">
+            <span id="fileName">Choose a court PDF</span>
+            <input id="pdfInput" name="file" type="file" accept="application/pdf">
+          </label>
+
+          <label class="toggle-row">
+            <input id="mockMode" type="checkbox" checked>
+            <span>Demo-safe mock upload</span>
+          </label>
+
+          <button type="submit" class="primary-button">Analyze Document</button>
+          <button type="button" id="loadDemo" class="secondary-button">Load Demo Case</button>
+        </form>
+
+        <div class="demo-note">
+          <strong>Presentation mode</strong>
+          <p>Upload errors automatically fall back to the verified demo response.</p>
+        </div>
+
+        <div class="metric-stack">
+          <div>
+            <span>Mode</span>
+            <strong id="processingMode">demo_test</strong>
+          </div>
+          <div>
+            <span>Request ID</span>
+            <strong id="requestId">-</strong>
+          </div>
+        </div>
+      </aside>
+
+      <section class="dashboard">
+        <section class="case-band">
+          <div>
+            <p class="eyebrow">Case Overview</p>
+            <h2 id="caseNumber">Loading case...</h2>
+            <p id="parties" class="muted">Petitioner and respondent details will appear here.</p>
+          </div>
+          <div class="badge-row">
+            <span id="priorityBadge" class="badge neutral">Priority</span>
+            <span id="riskBadge" class="badge neutral">Risk</span>
+            <span id="appealBadge" class="badge neutral">Appeal</span>
+          </div>
+        </section>
+
+        <section class="kpi-grid">
+          <article class="kpi">
+            <span>Legal Risk</span>
+            <strong id="riskMeter">0</strong>
+            <div class="meter"><span id="riskFill"></span></div>
+          </article>
+          <article class="kpi">
+            <span>Action Heat</span>
+            <strong id="heatScore">0</strong>
+            <div class="meter"><span id="heatFill"></span></div>
+          </article>
+          <article class="kpi">
+            <span>Compliance</span>
+            <strong id="complianceState">Unknown</strong>
+            <p id="authorityState">Authority pending</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="section-card wide">
+            <div class="section-title">
+              <h3>Recommended Administrative Actions</h3>
+              <span id="actionCount">0 actions</span>
+            </div>
+            <div id="actionsList" class="action-list"></div>
+          </article>
+
+          <article class="section-card">
+            <div class="section-title">
+              <h3>Deadline Timeline</h3>
+              <span id="deadlineCount">0 deadlines</span>
+            </div>
+            <div id="deadlineList" class="timeline"></div>
+          </article>
+
+          <article class="section-card">
+            <div class="section-title">
+              <h3>Executive Summary</h3>
+              <span>Judge view</span>
+            </div>
+            <div id="summaryList" class="summary-list"></div>
+          </article>
+
+          <article class="section-card wide">
+            <div class="section-title">
+              <h3>Explainable AI Reasoning</h3>
+              <span>Deterministic rules</span>
+            </div>
+            <div id="reasoningList" class="reasoning-list"></div>
+          </article>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="./app.js"></script>
+</body>
+</html>

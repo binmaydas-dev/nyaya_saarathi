@@ -1,0 +1,82 @@
+{
+    "info": {
+        "name": "NyayaMitra Backend API",
+        "description": "API collection for the NyayaMitra legal document processing backend.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/health",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8000",
+                    "path": ["health"]
+                }
+            }
+        },
+        {
+            "name": "2. System Metrics",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/metrics",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8000",
+                    "path": ["metrics"]
+                }
+            }
+        },
+        {
+            "name": "3. Upload PDF (Demo Mode)",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "sample_cases/compensation_case.pdf"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:8000/upload?mock_mode=true&lang=en",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8000",
+                    "path": ["upload"],
+                    "query": [
+                        {"key": "mock_mode", "value": "true"},
+                        {"key": "lang", "value": "en"}
+                    ]
+                }
+            }
+        },
+        {
+            "name": "4. Export Results (TXT)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/export/<uuid_from_upload>?format=txt",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8000",
+                    "path": ["export", "<uuid_from_upload>"],
+                    "query": [
+                        {"key": "format", "value": "txt"}
+                    ]
+                }
+            }
+        }
+    ]
+}
